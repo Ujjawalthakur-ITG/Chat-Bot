@@ -1,16 +1,12 @@
 import { PrismaClient } from "@prisma/client";
-import { PrismaSQLite } from "@prisma/adapter-sqlite";
-import { sqlite3 } from "sqlite3";
 
 if (process.env.NODE_ENV !== "production") {
   if (!global.prismaGlobal) {
-    const adapter = new PrismaSQLite(sqlite3.Database("dev.sqlite"));
-    global.prismaGlobal = new PrismaClient({ adapter });
+    global.prismaGlobal = new PrismaClient();
   }
 }
 
-const adapter = new PrismaSQLite(sqlite3.Database("dev.sqlite"));
-const prisma = global.prismaGlobal ?? new PrismaClient({ adapter });
+const prisma = global.prismaGlobal ?? new PrismaClient();
 
 export default prisma;
 
