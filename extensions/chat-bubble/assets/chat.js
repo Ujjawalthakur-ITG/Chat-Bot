@@ -234,8 +234,9 @@
        */
       send: async function(chatInput, messagesContainer) {
         const userMessage = chatInput.value.trim();
+        console.log(sessionStorage,'sessionStorage');
         const conversationId = sessionStorage.getItem('shopAiConversationId');
-
+         console.log('conversationId:', conversationId);
         // Add user message to chat
         this.add(userMessage, 'user', messagesContainer);
 
