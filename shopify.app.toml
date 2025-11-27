@@ -2,7 +2,7 @@
 
 client_id = "bcba1225988ff208808abda8414efbc5"
 name = "Cliento"
-application_url = "https://example.com"
+application_url = "https://chat-bot-ji8m.onrender.com"
 embedded = true
 
 [webhooks]
@@ -23,7 +23,7 @@ optional_scopes = [ ]
 use_legacy_install_flow = false
 
 [auth]
-redirect_urls = [ "https://example.com/api/auth" ]
+redirect_urls = [ "https://chat-bot-ji8m.onrender.com/api/auth" ]
 
 [build]
 automatically_update_urls_on_dev = true
