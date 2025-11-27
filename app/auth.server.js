@@ -1,6 +1,7 @@
 /**
  * Authentication service for handling OAuth and PKCE flows
  */
+import { storeCodeVerifier } from './db.server';
 
 /**
  * Generate authorization URL for the customer
@@ -8,7 +9,6 @@
  * @returns {Promise<Object>} - Object containing the auth URL and conversation ID
  */
 export async function generateAuthUrl(conversationId, shopId) {
-  const { storeCodeVerifier } = await import('./db.server');
 
   // Generate authorization URL for the customer
   const clientId = process.env.SHOPIFY_API_KEY;

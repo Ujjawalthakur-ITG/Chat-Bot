@@ -615,9 +615,11 @@
             ShopAIChat.UI.showTypingIndicator();
             break;
         }
+
+        console.log('Stream event:', data);
       },
 
-      /**
+      /** 
        * Fetch chat history from the server
        * @param {string} conversationId - Conversation ID
        * @param {HTMLElement} messagesContainer - The messages container
